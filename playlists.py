@@ -42,12 +42,12 @@ async def main():
                     'year': year,
                     'index': index + 1,  # Adding 1 to start index from 1
                     'name': track['track']['name'],
-                    'artists': ', '.join(artists),
+                    'artists': artists[0],
                     'id': track['track']['id'],
                     'link': track['track']['external_urls']['spotify']
                 }
                 result_data.append(item_data)
-
+                
                 print(f"{item_data['index']} - {item_data['name']} : {item_data['link']}")
 
     finally:
