@@ -42,7 +42,7 @@ async def main():
                     'year': year,
                     'index': index + 1,  # Adding 1 to start index from 1
                     'name': track['track']['name'],
-                    'artists': artists[0],
+                    'artists': artists[0], # only gets the first artist, no featured artists or collaborators
                     'id': track['track']['id'],
                     'link': track['track']['external_urls']['spotify']
                 }
