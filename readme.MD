@@ -2,6 +2,12 @@
 
 This is a Jupyter Notebook and .py script to extract your Spotify Wrapped playlist data and generate insights from the created dataset. Analytics insights are WIP.
 
+## Compatibility:
+
+Python <= 3.11.
+
+```aiohttp``` has issues running with 3.12, as of January 2025.
+
 ## Setting up the script to get your dataset:
 1. Setup venv/poetry. 
 2. Define environment variables: CLIENT_ID and SECRET_ID. Get them through the Spotify Developer Console.
