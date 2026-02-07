@@ -5,3 +5,4 @@ list.csv
 .venv
 playlist_ids
 .cache
+__pycache__
