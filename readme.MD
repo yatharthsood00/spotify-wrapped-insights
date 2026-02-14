@@ -46,25 +46,6 @@ Retrieve and analyse your Spotify Wrapped playlists over the years and get insig
 
 ---
 
-## Testing & Validation
-
-Complete test suite available in [TESTING.md](TESTING.md)
-
-Quick validation:
-
-```bash
-# Test configuration
-python -c "from src.config import SPOTIFY_CLIENT_ID; print('✓ Credentials configured')"
-
-# Test data pipeline
-python scripts/main.py --process
-
-# Test OAuth (if configured)
-python exploratory/oauth_explorer.py --user-profile
-```
-
----
-
 ## Troubleshooting
 
 ### "Authentication failed" or "Credentials not found"
@@ -79,10 +60,6 @@ python -c "from src.config import SPOTIFY_CLIENT_ID; print(f'ID: {SPOTIFY_CLIENT
 
 Should show your actual credentials (not empty)
 
-### OAuth "redirect_uri_mismatch"
-
-See [OAUTH_SETUP.md - Common Issues](OAUTH_SETUP.md#common-issues)
-
 ### "No module named 'spotipy'"
 
 ```bash
@@ -93,30 +70,11 @@ pip install -r requirements.txt
 ### Notebook won't run
 
 ```bash
-# Ensure Jupyter is installed
-pip install jupyter ipykernel
-jupyter notebook notebooks/kaggle_export.ipynb
+# Additional requirements for locally running the notebook are in the requirements_notebook.txt file
+pip install -r requirements_notebook.txt
 ```
 
----
-
-## Architecture
-
-**Three-layer design:**
-
-1. **Library (`src/`)** - Core Spotify interactions and data processing
-2. **Scripts (`scripts/`)** - CLI executables for production use
-3. **Exploratory (`exploratory/`)** - Experimentation and learning
-
-**Data flow:**
-
-```
-Spotify API → list.csv (raw) → working.csv (processed) → Analysis
-  ↓                              ↓
-spotify_fetcher.py         data_processor.py
-  ↓
-main.py (CLI)
-```
+You should be able to run the Jupyter Notebook after having the requirements installed.
 
 ---
 
@@ -186,7 +144,8 @@ Outputs:
 
 ### Part 2: Analysis Notebook (Kaggle)
 
-**Run exploratory analysis on your data. Run it like a Jupyter Notebook**
+**Run exploratory analysis on your data. Just run it like a Jupyter Notebook. WIP.**
 
+### Part 3: Website
 
-
+**Also WIP**
