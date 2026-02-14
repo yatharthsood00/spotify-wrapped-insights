@@ -1,8 +1,57 @@
-env/
-list.csv
-.vscode/
+# Environment variables
 .env
+.env.local
+
+# Virtual environments
+env/
+venv/
+ENV/
 .venv
-playlist_ids
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project-specific
+data/list.csv
+data/working.csv
+analysis_results.json
 .cache
-__pycache__
+playlist_ids
+playlist_ids/
+.spotifycache
+/exploratory/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
